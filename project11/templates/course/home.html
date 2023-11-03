@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable filter</title>
+  </head>
+  <body>
+    <h1>course Name {{name|upper}} duration {{duration}} seats {{seats}}</h1>
+    <p>{{details|slice:'5'}}</p>
+    <p>{{details|truncatechars:5}}</p>
+    <p>{{details|truncatewords:2}}</p>
+    <p>{{date|date:'D d M Y'}}</p>
+    <p>{{date|time:'H:i'}}</p>
+    <p>{{date|date:'DATETIME_FORMAT'}}</p>
+    <p>{{float|floatformat}}</p>
+    <p>{{float|floatformat:'3'}}</p>
+    <p>{{float|floatformat:'0'}}</p>
+  </body>
+</html>

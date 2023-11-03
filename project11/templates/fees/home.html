@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Fees</h1>
+    {% if name %}
+    <h3>Hello {{name}}</h3>
+    {% endif %}
+
+    <div>
+      <h2>Example 8.1</h2>
+      {% if name and state %}
+      <h3>{{state}} seats are available for {{state}} course</h3>
+      {% elif state %}
+      state is true
+      {% else %} No athletes.
+      {% endif %}
+    </div>
+  </body>
+</html>

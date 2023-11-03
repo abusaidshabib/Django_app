@@ -16,11 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from course import urls as course
-from fees import urls as fees
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v4/course', include(course)),
-    path('api/v4/fees', include(fees))
+    path('api/v4/course/', include('course.urls')),
+    path('api/v4/fees/', include('fees.urls'))
 ]
