@@ -15,9 +15,16 @@
       <h2>Example 8.1</h2>
       {% if name and state %}
       <h3>{{state}} seats are available for {{state}} course</h3>
-      {% elif state %}
-      state is true
-      {% else %} No athletes.
+      {% elif state %} state is true {% else %} No athletes. {% endif %}
+    </div>
+
+    <div>
+      {% if state >= 2 %}
+      <h3>It's print more than 2 or more</h3>
+      {% elif state == 0 %}
+      <h3>It will print if it's 0</h3>
+      {% else %}
+      <h3>It will print nothing</h3>
       {% endif %}
     </div>
   </body>
