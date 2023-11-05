@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <br />
+    <!-- {{student.stu1.name}} {{student.stu1.roll}} {{student.stu2.name}}
+    {{student.stu2.roll}} {{student.stu3.name}} {{student.stu3.roll}}
+    {{student.stu4.name}} {{student.stu4.roll}} -->
+    {% for key,value in student.items %}
+    <!-- {{key}} = {{value}}  -->
+    <br />
+    {{key}}
+    <br />
+    {% for k,v in value.items %} {{forloop.parentloop.counter}}
+    {{forloop.counter}} {{k}} = {{v}} <br />
+    {% endfor %} {% endfor %}
+  </body>
+</html>

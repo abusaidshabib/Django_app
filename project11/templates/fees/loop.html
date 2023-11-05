@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable filter</title>
+  </head>
+  <body>
+    <!-- <ul>
+      {% for name in names %}
+      <li>{{name}}</li>
+      {% empty %}
+      <h3>If the name is not available</h3>
+      {% endfor %}
+    </ul> -->
+    <ul>
+      {% for name in names %} {{forloop.counter}} {{name}}<br />
+      {% empty %}
+      <h3>If the name is not available</h3>
+      {% endfor %}
+    </ul>
+    <!-- reversed keyword will help to reverse the loop -->
+    <!-- <ul>
+      {% for name in names reversed %}
+      <li>{{name}}</li>
+      {% endfor %}
+    </ul> -->
+  </body>
+</html>
