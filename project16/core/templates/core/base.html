@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% block styles %} {% endblock styles %}
+    <title>{% block title %} {% endblock title %}-project</title>
+  </head>
+  <body>
+    {% include 'core/navbar.html' %}
+    <div class="h-16"></div>
+    
+    {% block content %} {% endblock content %}
+    {% include 'core/footer.html' %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+    <p>Home page</p>
+    {% include "core/includeTest.html" with p="Home" %}
+{% endblock content %}
+    
