@@ -1,0 +1,27 @@
+{% extends 'core/main.html' %} {% block title %} enroll {% endblock title %}
+{% block content %}
+<p>Student</p>
+<!-- {{student}} -->
+{% if student %}
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Student Id</th>
+    <th>Student Name</th>
+    <th>Student Email</th>
+    <th>Student Pass</th>
+  </tr>
+  {% for stu in student %}
+  <tr>
+    <td>{{stu.id}}</td>
+    <td>{{stu.suid}}</td>
+    <td>{{stu.sname}}</td>
+    <td>{{stu.smail}}</td>
+    <td>{{stu.spass}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% else %}
+<h1>No data</h1>
+{% endif %} {% endblock content %}
